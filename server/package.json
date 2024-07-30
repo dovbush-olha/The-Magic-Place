@@ -9,6 +9,7 @@
     "prettify": "prettier --loglevel warn --cache --write . -ext .json,.ts,.tsx,.js,.jsx,.css,.scss,.md,.mdx,.html --ignore-unknown"
   },
   "dependencies": {
+    "@trpc/server": "^10.45.2",
     "express": "^4.19.2"
   },
   "devDependencies": {
