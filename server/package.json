@@ -2,8 +2,12 @@
   "name": "server",
   "private": true,
   "version": "0.0.0",
+  "scripts": {
+    "dev": "ts-node-dev --rs src/index.ts"
+  },
   "devDependencies": {
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.4"
   }
 }
