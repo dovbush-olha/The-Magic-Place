@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "ts-node-dev --rs src/index.ts",
+    "build": "rimraf ./dist && tsc --build ./tsconfig.json",
+    "start": "node ./dist/index.js",
+    "prettify": "prettier --loglevel warn --cache --write . -ext .json,.ts,.tsx,.js,.jsx,.css,.scss,.md,.mdx,.html --ignore-unknown"
+  },
+  "dependencies": {
+    "@trpc/server": "^11.0.0-rc.467",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  }
+}
