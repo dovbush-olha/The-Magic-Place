@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "@magic-place/client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@magic-place/server": "workspace:*",
     "@tanstack/react-query": "^5.51.15",
     "@trpc/client": "^11.0.0-rc.467",
     "@trpc/react-query": "^11.0.0-rc.467",
