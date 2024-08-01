@@ -3,7 +3,7 @@ import { createTRPCReact, httpBatchLink } from '@trpc/react-query';
 
 import type { AppRouter } from '../../../server/src/trpc';
 
-export const trpc = createTRPCReact<AppRouter>();
+export const serverApiClient = createTRPCReact<AppRouter>();
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,17 +14,17 @@ const queryClient = new QueryClient({
   },
 });
 
-const trpcClient = trpc.createClient({
-  links: [httpBatchLink({ url: 'http://localhost:3000/trcp' })],
+const serverApiClientInstance = serverApiClient.createClient({
+  links: [httpBatchLink({ url: 'http://localhost:3000/api' })],
 });
 
-export const trpcProvider = ({ children }: { children: React.ReactNode }) => {
+export const ServerApiClientProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <trpc.Provider
-      client={trpcClient}
+    <serverApiClient.Provider
+      client={serverApiClientInstance}
       queryClient={queryClient}
     >
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </trpc.Provider>
+    </serverApiClient.Provider>
   );
 };
