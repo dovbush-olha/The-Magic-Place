@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettify": "prettier --loglevel warn --cache --write . -ext .json,.ts,.tsx,.js,.jsx,.css,.scss,.md,.mdx,.html --ignore-unknown",
-    "preview": "vite preview"
+    "types": "tsc --noEmit --project ./tsconfig.node.json && tsc --noEmit --project ./tsconfig.app.json"
   },
   "dependencies": {
     "@magic-place/server": "workspace:*",

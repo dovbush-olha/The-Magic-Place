@@ -15,7 +15,7 @@ export function AllIdeasPage() {
     <div>
       <h1>All Ideas Page</h1>
       <ul>
-        {data.ideas.map((idea) => (
+        {data?.ideas.map((idea) => (
           <li key={idea.id}>
             <p>{idea.title}</p>
             <p>{idea.description}</p>

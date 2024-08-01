@@ -6,7 +6,8 @@
     "dev": "ts-node-dev --rs src/index.ts",
     "build": "rimraf ./dist && tsc --build ./tsconfig.json",
     "start": "node ./dist/index.js",
-    "prettify": "prettier --loglevel warn --cache --write . -ext .json,.ts,.tsx,.js,.jsx,.css,.scss,.md,.mdx,.html --ignore-unknown"
+    "prettify": "prettier --loglevel warn --cache --write . -ext .json,.ts,.tsx,.js,.jsx,.css,.scss,.md,.mdx,.html --ignore-unknown",
+    "types": "tsc --noEmit --project ./tsconfig.json"
   },
   "dependencies": {
     "@trpc/server": "^11.0.0-rc.467",
