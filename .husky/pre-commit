@@ -1,2 +1,2 @@
 pnpm types
-npx lint-staged
+pnpm lint-staged
