@@ -9,7 +9,7 @@
     "types": "pnpm -r --parallel types",
     "prettify": "pnpm -r --parallel prettify",
     "lint": "pnpm -r --parallel lint",
-    "prepare": "husky install | chmod ug+x .husky/*"
+    "prepare": "husky | chmod ug+x .husky/*"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.15.0",
