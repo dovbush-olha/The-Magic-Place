@@ -1,19 +1,19 @@
 import { initTRPC } from '@trpc/server';
 
-const ideas = [
+const spells = [
   {
-    id: 1,
-    title: 'Idea 1',
+    name: 'revelio',
+    book: 'Book 1',
     description: 'Description 1',
   },
   {
-    id: 2,
-    title: 'Idea 2',
+    name: 'flipendo',
+    book: 'Book 2',
     description: 'Description 2',
   },
   {
-    id: 3,
-    title: 'Idea 3',
+    name: 'alohomora',
+    book: 'Book 3',
     description: 'Description 3',
   },
 ];
@@ -24,8 +24,8 @@ const router = t.router;
 const publicProcedure = t.procedure;
 
 export const appRouter = router({
-  getIdeas: publicProcedure.query(() => {
-    return { ideas };
+  getSpells: publicProcedure.query(() => {
+    return { spells };
   }),
 });
 
