@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { ROUTES } from './lib/routes.ts';
 import { ServerApiClientProvider } from './lib/trpc.tsx';
 import { AllSpellsPage } from './pages/AllSpellsPage';
 import { ViewSpellPage } from './pages/ViewSpellPage';
@@ -10,11 +11,11 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/spells"
+            path={ROUTES.getAllSpells()}
             element={<AllSpellsPage />}
           />
           <Route
-            path="/spells/:spellName"
+            path={ROUTES.getSpell({ spellName: ':spellName' })}
             element={<ViewSpellPage />}
           />
         </Routes>
