@@ -1,18 +1,19 @@
 import { initTRPC } from '@trpc/server';
+import { z } from 'zod';
 
 const spells = [
   {
-    name: 'revelio',
+    spellName: 'revelio',
     book: 'Book 1',
     description: 'Description 1',
   },
   {
-    name: 'flipendo',
+    spellName: 'flipendo',
     book: 'Book 2',
     description: 'Description 2',
   },
   {
-    name: 'alohomora',
+    spellName: 'alohomora',
     book: 'Book 3',
     description: 'Description 3',
   },
@@ -27,6 +28,16 @@ export const appRouter = router({
   getSpells: publicProcedure.query(() => {
     return { spells };
   }),
+  getSpell: publicProcedure
+    .input(
+      z.object({
+        spellName: z.string().min(1),
+      }),
+    )
+    .query(({ input }) => {
+      const spell = spells.find((spell) => spell.spellName === input.spellName);
+      return spell ?? null;
+    }),
 });
 
 export type AppRouter = typeof appRouter;
