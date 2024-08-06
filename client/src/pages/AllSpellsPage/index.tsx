@@ -20,7 +20,7 @@ export function AllSpellsPage() {
       <ul>
         {data?.spells.map((spell) => (
           <li key={spell.name}>
-            <Link to={ROUTES.getSpell({ spellName: spell.name })}>{spell.name}</Link>
+            <Link to={ROUTES.viewSpellRoute({ spellName: spell.name })}>{spell.name}</Link>
             <p>{spell.book}</p>
             <p>{spell.description}</p>
           </li>
