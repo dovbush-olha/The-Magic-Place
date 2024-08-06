@@ -36,7 +36,7 @@ export const appRouter = router({
     )
     .query(({ input }) => {
       const spell = spells.find((spell) => spell.spellName === input.spellName);
-      return spell ?? null;
+      return { spell: spell ?? null };
     }),
 });
 
