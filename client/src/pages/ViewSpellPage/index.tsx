@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import type { RouteParams } from '../../lib/routes';
+import type { RouteParams } from '../../lib/routes/config';
 import { serverApiClient } from '../../lib/trpc.tsx';
 
 export function ViewSpellPage() {
