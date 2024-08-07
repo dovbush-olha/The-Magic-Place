@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { ROUTES, routesParams } from './lib/routes.ts';
+import { routeParams, ROUTES } from './lib/routes';
 import { ServerApiClientProvider } from './lib/trpc.tsx';
 import { AllSpellsPage } from './pages/AllSpellsPage';
 import { ViewSpellPage } from './pages/ViewSpellPage';
@@ -15,7 +15,7 @@ export function App() {
             element={<AllSpellsPage />}
           />
           <Route
-            path={ROUTES.viewSpellRoute(routesParams.viewSpellParams)}
+            path={ROUTES.viewSpellRoute(routeParams.viewSpellParams)}
             element={<ViewSpellPage />}
           />
         </Routes>

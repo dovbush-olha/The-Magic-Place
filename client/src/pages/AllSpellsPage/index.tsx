@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { ROUTES } from '../../lib/routes.ts';
+import { ROUTES } from '../../lib/routes';
 import { serverApiClient } from '../../lib/trpc';
 
 export function AllSpellsPage() {
@@ -19,8 +19,8 @@ export function AllSpellsPage() {
       <h1>All Spells Page</h1>
       <ul>
         {data?.spells.map((spell) => (
-          <li key={spell.name}>
-            <Link to={ROUTES.viewSpellRoute({ spellName: spell.name })}>{spell.name}</Link>
+          <li key={spell.spellName}>
+            <Link to={ROUTES.viewSpellRoute({ spellName: spell.spellName })}>{spell.spellName}</Link>
             <p>{spell.book}</p>
             <p>{spell.description}</p>
           </li>
