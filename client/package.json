@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts,.tsx .",
-    "prettify": "prettier --loglevel warn --cache --write . -ext .json,.ts,.tsx,.js,.jsx,.css,.scss,.md,.mdx,.html --ignore-unknown",
+    "prettify": "prettier --log-level warn --cache --write .",
     "types": "tsc --noEmit --project ./tsconfig.node.json && tsc --noEmit --project ./tsconfig.app.json"
   },
   "dependencies": {
@@ -18,7 +18,8 @@
     "@trpc/react-query": "^11.0.0-rc.467",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.0"
+    "react-router-dom": "^6.26.0",
+    "sass": "^1.77.8"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
