@@ -1,0 +1,27 @@
+$colors: (
+  background: (
+    dark-blue: #000616,
+    dark-blue-20: hsla(0, 0%, 0%, 0.2),
+  ),
+  buttons: (
+    brown-100: #b38f47,
+    brown-20: hsla(40, 43%, 49%, 0.1),
+    beige-20: hsla(39, 100%, 95%, 0.2),
+    disabled: hsl(0, 0%, 80%),
+    blue: hsla(224, 100%, 80%, 0.1),
+    linear-blue: linear-gradient(94.84deg, #3d5699 -0.3%, #3d5699 -0.3%, #ccdaff 99%),
+  ),
+  main: (
+    beige-100: #fff6e6,
+    beige-20: hsla(39, 100%, 95%, 0.2),
+  ),
+  text: (
+    beige: #e6d4b7,
+    light-beige: #fff5e6,
+    blue: #99b4ff,
+  ),
+);
+
+@function color($category, $color-name) {
+  @return map-get(map-get($colors, $category), $color-name);
+}
