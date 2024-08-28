@@ -12,6 +12,7 @@
     "types": "tsc --noEmit --project ./tsconfig.node.json && tsc --noEmit --project ./tsconfig.app.json"
   },
   "dependencies": {
+    "@fontsource-variable/geologica": "^5.0.6",
     "@magic-place/server": "workspace:*",
     "@tanstack/react-query": "^5.51.15",
     "@trpc/client": "^11.0.0-rc.467",
