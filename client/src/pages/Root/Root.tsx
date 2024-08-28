@@ -5,14 +5,23 @@ import { starsOptions } from '../../lib/particles/starsOptions.ts';
 
 import { useStarsParticles } from './useStarsParticles.ts';
 
+import './index.scss';
+
 export function Root() {
   const isParticlesInitialized = useStarsParticles();
 
   return (
-    <div>
-      <Outlet />
+    <>
+      {isParticlesInitialized && (
+        <Particles
+          options={starsOptions}
+          className="particles"
+        />
+      )}
 
-      {isParticlesInitialized && <Particles options={starsOptions} />}
-    </div>
+      <div>
+        <Outlet />
+      </div>
+    </>
   );
 }
