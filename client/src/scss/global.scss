@@ -58,3 +58,12 @@ body {
   color: color(text, beige);
   background-color: color(background, dark-blue);
 }
+
+@font-face {
+  font-family: "Potter";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("./fonts/HarryPotter.woff2") format("woff2"),
+    url("./fonts/HarryPotter.ttf") format("ttf");
+}
