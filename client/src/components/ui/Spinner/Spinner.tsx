@@ -1,6 +1,14 @@
 import styles from './Spinner.module.scss';
 
-export function Spinner() {
+interface SpinnerProps {
+  isLoading?: boolean;
+}
+
+export function Spinner({ isLoading = false }: SpinnerProps) {
+  if (!isLoading) {
+    return null;
+  }
+
   return (
     <div className={styles.center}>
       <div className={styles.wrapper}>
