@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import { ROUTES } from '../../lib/routes/config';
+import { ROUTES } from '@/lib/routes/config';
+
 import { serverApiClient } from '../../lib/trpc';
 
 export function AllSpellsPage() {
