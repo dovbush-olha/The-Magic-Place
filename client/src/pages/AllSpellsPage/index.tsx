@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { ROUTES } from '@/lib/routes/config';
 
-import { serverApiClient } from '../../lib/trpc';
+import { serverApiClient } from '../../lib/trpc/constants.ts';
 
 export function AllSpellsPage() {
   const { data, isLoading, isFetching, isError } = serverApiClient.getSpells.useQuery();
