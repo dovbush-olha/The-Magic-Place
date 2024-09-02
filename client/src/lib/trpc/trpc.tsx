@@ -1,8 +1,7 @@
-import type { AppRouter } from '@magic-place/server/src/trpc';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { createTRPCReact, httpBatchLink } from '@trpc/react-query';
+import { httpBatchLink } from '@trpc/react-query';
 
-export const serverApiClient = createTRPCReact<AppRouter>();
+import { serverApiClient } from '@/lib/trpc/constants.ts';
 
 const queryClient = new QueryClient({
   defaultOptions: {

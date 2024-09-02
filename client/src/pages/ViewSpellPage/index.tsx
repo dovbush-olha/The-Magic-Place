@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
 import type { RouteParams } from '../../lib/routes/config';
-import { serverApiClient } from '../../lib/trpc.tsx';
+import { serverApiClient } from '../../lib/trpc/constants.ts';
 
 export function ViewSpellPage() {
   const { spellName } = useParams() as RouteParams['viewSpellParams'];

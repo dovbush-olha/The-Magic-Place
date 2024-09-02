@@ -1,26 +1,52 @@
 {
   "env": {
-    "browser": true,
-    "es2020": true
+    "node": true,
+    "es6": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:react/jsx-runtime",
-    "../.eslintrc.json"
-  ],
+  "extends": ["../.eslintrc.json"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
     "project": ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"]
   },
   "plugins": ["react-refresh"],
-  "rules": {
-    "react-refresh/only-export-components": [
-      "warn",
-      {
-        "allowConstantExport": true
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "settings": {
+        "react": { "version": "detect" },
+        "import/resolver": {
+          "typescript": {
+            "project": ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"]
+          }
+        }
+      },
+      "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+      },
+      "rules": {
+        "import/default": "off",
+        "import/no-named-as-default": "off",
+        "import/no-cycle": "error",
+        "react-refresh/only-export-components": [
+          "warn",
+          {
+            "allowConstantExport": true
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }
