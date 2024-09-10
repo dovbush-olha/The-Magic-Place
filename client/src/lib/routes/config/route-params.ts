@@ -1,4 +1,4 @@
-import { getRouteParams } from './routeUtils.ts';
+import { getRouteParams } from './route-utils.ts';
 
 export const routeParams = {
   viewSpellParams: getRouteParams(['spellName']),

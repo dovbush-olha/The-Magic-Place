@@ -1,3 +1,3 @@
 export { ROUTES } from './routes.ts';
-export type { RouteParams } from './routeParams.ts';
-export { routeParams } from './routeParams.ts';
+export type { RouteParams } from './route-params.ts';
+export { routeParams } from './route-params.ts';

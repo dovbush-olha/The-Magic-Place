@@ -1,1 +1,1 @@
-export { starsOptions } from './starsOptions.ts';
+export { starsOptions } from './stars-options.ts';
