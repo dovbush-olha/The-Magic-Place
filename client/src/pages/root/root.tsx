@@ -3,7 +3,7 @@ import Particles from '@tsparticles/react';
 
 import { starsOptions } from '@/lib/particles';
 
-import { useStarsParticles } from './useStarsParticles.ts';
+import { useStarsParticles } from './use-stars-particles.ts';
 
 import './index.scss';
 

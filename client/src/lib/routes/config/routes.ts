@@ -1,4 +1,4 @@
-import type { RouteParams } from './routeParams.ts';
+import type { RouteParams } from './route-params.ts';
 
 export const ROUTES = {
   homeRoute: () => '/',

@@ -9,7 +9,7 @@
     "sourceType": "module",
     "project": ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"]
   },
-  "plugins": ["react-refresh"],
+  "plugins": ["react-refresh", "check-file"],
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
@@ -44,6 +44,27 @@
           "warn",
           {
             "allowConstantExport": true
+          }
+        ],
+        "check-file/filename-naming-convention": [
+          "error",
+          {
+            "**/*.{ts,tsx}": "KEBAB_CASE"
+          },
+          {
+            "ignoreMiddleExtensions": true
+          }
+        ]
+      }
+    },
+    {
+      "plugins": ["check-file"],
+      "files": ["src/**/!(__tests__)/*"],
+      "rules": {
+        "check-file/folder-naming-convention": [
+          "error",
+          {
+            "**/*": "KEBAB_CASE"
           }
         ]
       }
