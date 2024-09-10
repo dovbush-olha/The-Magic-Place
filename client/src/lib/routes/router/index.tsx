@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { AllSpellsPage } from 'src/pages/all-spells-page';
+import { ViewSpellPage } from 'src/pages/view-spell-page';
 
-import { AllSpellsPage } from '@/pages/AllSpellsPage';
-import { Root } from '@/pages/Root/root.tsx';
-import { ViewSpellPage } from '@/pages/ViewSpellPage';
+import { Root } from '@/pages/root/root.tsx';
 
 import { routeParams, ROUTES } from '../config';
 
