@@ -9,7 +9,7 @@
     "sourceType": "module",
     "project": ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"]
   },
-  "plugins": ["react-refresh"],
+  "plugins": ["react-refresh", "check-file"],
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
