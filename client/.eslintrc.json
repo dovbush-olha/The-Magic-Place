@@ -3,13 +3,6 @@
     "node": true,
     "es6": true
   },
-  "extends": ["../.eslintrc.json"],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"]
-  },
-  "plugins": ["react-refresh", "check-file"],
   "extends": [
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
@@ -17,14 +10,23 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended"
   ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"]
+  },
+  "plugins": ["react-refresh", "check-file"],
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.tsx"],
       "parser": "@typescript-eslint/parser",
       "settings": {
-        "react": { "version": "detect" },
+        "react": {
+          "version": "detect"
+        },
         "import/resolver": {
           "typescript": {
             "project": ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"]
