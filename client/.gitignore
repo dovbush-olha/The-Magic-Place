@@ -27,3 +27,4 @@ dist-ssr
 migration-storybook.log
 storybook.log
 storybook-static
+*storybook.log
