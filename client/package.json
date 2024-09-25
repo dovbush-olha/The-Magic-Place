@@ -11,7 +11,8 @@
     "prettify": "prettier --log-level warn --cache --write .",
     "types": "tsc --noEmit --project ./tsconfig.node.json && tsc --noEmit --project ./tsconfig.app.json",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest"
   },
   "dependencies": {
     "@fontsource-variable/geologica": "^5.0.6",
@@ -37,6 +38,8 @@
     "@storybook/react": "^8.2.9",
     "@storybook/react-vite": "^8.2.9",
     "@storybook/test": "^8.2.9",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
     "@tsparticles/engine": "^3.5.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -48,7 +51,9 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-storybook": "^0.8.0",
+    "happy-dom": "^15.7.4",
     "storybook": "^8.2.9",
-    "vite": "^5.3.4"
+    "vite": "^5.3.4",
+    "vitest": "^2.1.1"
   }
 }
