@@ -6,7 +6,9 @@ import { Root } from '@/pages/root/root.tsx';
 
 import { routeParams, ROUTES } from '../config';
 
-export const appRoutes = createBrowserRouter([
+type Router = ReturnType<typeof createBrowserRouter>;
+
+export const appRoutes: Router = createBrowserRouter([
   {
     path: ROUTES.homeRoute(),
     element: <Root />,
