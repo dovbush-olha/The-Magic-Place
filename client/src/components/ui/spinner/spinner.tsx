@@ -10,7 +10,10 @@ export function Spinner({ isLoading = false }: SpinnerProps) {
   }
 
   return (
-    <div className={styles.center}>
+    <div
+      className={styles.center}
+      data-testid="spinner"
+    >
       <div className={styles.wrapper}>
         <div className={styles.firstRing} />
         <div className={styles.secondRing} />
