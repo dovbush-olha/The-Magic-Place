@@ -7,7 +7,7 @@ import { useStarsParticles } from './use-stars-particles.ts';
 
 import './index.scss';
 
-export function Root() {
+export function RootRoute() {
   const isParticlesInitialized = useStarsParticles();
 
   return (

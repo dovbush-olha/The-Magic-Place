@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { SpellsRoute } from 'src/app/routes/router/app-routes/spells-route';
+import { ViewSpellRoute } from 'src/app/routes/router/app-routes/view-spell-route';
 
-import { AllSpellsPage } from '@/features/all-spells-page';
-import { Root } from '@/features/root/root.tsx';
-import { ViewSpellPage } from '@/features/view-spell-page';
+import { RootRoute } from '@/app/routes/router/app-routes/root-route/root-route.tsx';
 
 import { routeParams, ROUTES } from '../config';
 
@@ -11,15 +11,15 @@ type Router = ReturnType<typeof createBrowserRouter>;
 export const appRoutes: Router = createBrowserRouter([
   {
     path: ROUTES.homeRoute(),
-    element: <Root />,
+    element: <RootRoute />,
     children: [
       {
         path: ROUTES.allSpellsRoutes(),
-        element: <AllSpellsPage />,
+        element: <SpellsRoute />,
       },
       {
         path: ROUTES.viewSpellRoute(routeParams.viewSpellParams),
-        element: <ViewSpellPage />,
+        element: <ViewSpellRoute />,
       },
     ],
   },
