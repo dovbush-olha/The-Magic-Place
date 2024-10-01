@@ -7,7 +7,7 @@
   border-radius: 50%;
 }
 
-@mixin rotateKeyframes($name, $rotateX, $rotateY) {
+@mixin rotate-keyframes($name, $rotateX, $rotateY) {
   @keyframes #{$name} {
     0% {
       transform: rotateX(#{$rotateX}) rotateY(#{$rotateY}) rotateZ(0deg);
@@ -19,11 +19,11 @@
   }
 }
 
-@include rotateKeyframes(rotateFirst, 35deg, -45deg);
-@include rotateKeyframes(rotateSecond, 55deg, 10deg);
-@include rotateKeyframes(rotateThird, 35deg, 55deg);
+@include rotate-keyframes(rotateFirst, 35deg, -45deg);
+@include rotate-keyframes(rotateSecond, 55deg, 10deg);
+@include rotate-keyframes(rotateThird, 35deg, 55deg);
 
-@mixin rotateAnimation($animation) {
+@mixin rotate-animation($animation) {
   animation: $animation 1s linear infinite;
 }
 
@@ -44,7 +44,8 @@
 
 .firstRing {
   @include full-circle;
-  @include rotateAnimation(rotateFirst);
+  @include rotate-animation(rotateFirst);
+
   left: 0%;
   top: 0%;
   border-bottom: 3px solid color(text, light-beige);
@@ -52,7 +53,8 @@
 
 .secondRing {
   @include full-circle;
-  @include rotateAnimation(rotateSecond);
+  @include rotate-animation(rotateSecond);
+
   right: 0%;
   top: 0%;
   border-right: 3px solid color(text, light-beige);
@@ -60,7 +62,8 @@
 
 .thirdRing {
   @include full-circle;
-  @include rotateAnimation(rotateThird);
+  @include rotate-animation(rotateThird);
+
   right: 0%;
   bottom: 0%;
   border-top: 3px solid color(text, light-beige);
