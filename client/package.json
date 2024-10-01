@@ -13,7 +13,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest",
-    "generate": "plop"
+    "generate": "plop",
+    "stylelint": "stylelint --cache --cache-location ./node_modules/.cache/.stylelintcache 'src/**/*.scss'"
   },
   "dependencies": {
     "@fontsource-variable/geologica": "^5.0.6",

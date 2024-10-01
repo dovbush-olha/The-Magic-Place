@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $primary-font: "Geologica Variable", sans-serif;
 $accent-font: "Potter", cursive;
 
@@ -10,5 +12,5 @@ $font-weights: (
 );
 
 @function font-weight($weight-name) {
-  @return map-get($font-weights, $weight-name);
+  @return map.get($font-weights, $weight-name);
 }

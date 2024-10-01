@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $breakpoints: (
   mobile-max: 550,
   tablet-max: 1100,
@@ -5,15 +7,15 @@ $breakpoints: (
 );
 
 $queries: (
-  up-to-mobile: "(max-width: #{map-get($breakpoints, mobile-max) / 16}rem)",
-  up-to-tablet: "(max-width: #{map-get($breakpoints, tablet-max) / 16}rem)",
-  up-to-laptop: "(max-width: #{map-get($breakpoints, laptop-max) / 16}rem)",
+  up-to-mobile: "(max-width: #{map.get($breakpoints, mobile-max) / 16}rem)",
+  up-to-tablet: "(max-width: #{map.get($breakpoints, tablet-max) / 16}rem)",
+  up-to-laptop: "(max-width: #{map.get($breakpoints, laptop-max) / 16}rem)",
   tablet-only:
-    "(min-width: #{map-get($breakpoints, mobile-max) / 16}rem) and (max-width: #{map-get($breakpoints, tablet-max) / 16}rem)",
+    "(min-width: #{map.get($breakpoints, mobile-max) / 16}rem) and (max-width: #{map.get($breakpoints, tablet-max) / 16}rem)",
 );
 
 @mixin query($query) {
-  @media #{map-get($queries, $query)} {
+  @media #{map.get($queries, $query)} {
     @content;
   }
 }

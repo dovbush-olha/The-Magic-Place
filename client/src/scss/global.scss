@@ -11,14 +11,8 @@
   margin: 0;
 }
 
-html,
-body {
+html {
   height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -52,6 +46,8 @@ h6 {
 }
 
 body {
+  height: 100%;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: $primary-font;
   font-weight: font-weight(light);
@@ -60,7 +56,7 @@ body {
 }
 
 @font-face {
-  font-family: "Potter";
+  font-family: Potter;
   font-style: normal;
   font-weight: 400;
   src:
