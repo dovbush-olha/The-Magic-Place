@@ -14,7 +14,8 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "generate": "plop",
-    "stylelint": "stylelint --cache --cache-location ./node_modules/.cache/.stylelintcache 'src/**/*.scss'"
+    "stylelint": "stylelint --cache --cache-location ./node_modules/.cache/.stylelintcache 'src/**/*.scss'",
+    "stylecheck": "sass --update -q ./src:./node_modules/.cache/.stylecheckcache"
   },
   "dependencies": {
     "@fontsource-variable/geologica": "^5.0.6",
