@@ -1,2 +1,3 @@
 pnpm types
+pnpm run c stylecheck
 pnpm lint-staged
