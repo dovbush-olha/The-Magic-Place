@@ -1,4 +1,4 @@
-import { AppRouter } from '@magic-place/server/src/trpc.ts';
+import { TrpcBackendRouter } from '@magic-place/server/src/router';
 import { createTRPCReact } from '@trpc/react-query';
 
-export const serverApiClient = createTRPCReact<AppRouter>();
+export const serverApiClient = createTRPCReact<TrpcBackendRouter>();

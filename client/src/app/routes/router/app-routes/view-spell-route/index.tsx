@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import type { RouteParams } from '@/app/routes/config';
+import type { RouteParams } from '@/config/routes';
 import { Spell } from '@/features/spells/components/spell.tsx';
 import { serverApiClient } from '@/lib/trpc/constants.ts';
 
