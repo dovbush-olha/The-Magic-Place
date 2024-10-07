@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { ROUTES } from '@/app/routes/config';
+import { ROUTES } from '@/config/routes';
 import { serverApiClient } from '@/lib/trpc/constants.ts';
 
 export function SpellsList() {
