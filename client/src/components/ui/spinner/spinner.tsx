@@ -1,8 +1,8 @@
 import styles from './spinner.module.scss';
 
-interface SpinnerProps {
+type SpinnerProps = {
   isLoading?: boolean;
-}
+};
 
 export function Spinner({ isLoading = false }: SpinnerProps) {
   if (!isLoading) {

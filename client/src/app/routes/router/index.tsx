@@ -4,7 +4,7 @@ import { ViewSpellRoute } from 'src/app/routes/router/app-routes/view-spell-rout
 
 import { RootRoute } from '@/app/routes/router/app-routes/root-route/root-route.tsx';
 
-import { routeParams, ROUTES } from '../config';
+import { routeParams, ROUTES } from '../../../config/routes';
 
 type Router = ReturnType<typeof createBrowserRouter>;
 
