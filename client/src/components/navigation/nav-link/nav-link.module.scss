@@ -1,0 +1,28 @@
+@import "../../../scss/settings";
+
+.navLink {
+  font-size: var(--14px);
+  line-height: var(--18px);
+  font-weight: font-weight(bold);
+  color: color(text, beige);
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid;
+  border-image-source: linear-gradient(270deg, rgba(255 255 255 / 0%) 0%, #ffd480 46.87%, rgba(255 255 255 / 0%) 100%);
+  border-image-slice: 1;
+  position: relative;
+  height: 40px;
+  margin-bottom: 10px;
+
+  &.active {
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 7px;
+      background-color: #b28f47;
+      filter: blur(24px);
+    }
+  }
+}
