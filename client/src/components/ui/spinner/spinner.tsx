@@ -1,7 +1,7 @@
 import styles from './spinner.module.scss';
 
 type SpinnerProps = {
-  isLoading?: boolean;
+  readonly isLoading?: boolean;
 };
 
 export function Spinner({ isLoading = false }: SpinnerProps) {
