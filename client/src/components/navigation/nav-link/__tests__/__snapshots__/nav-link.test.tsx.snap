@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NavLink component > matches snapshot 1`] = `
+<DocumentFragment>
+  <a
+    class="_navLink_101612"
+    data-testid="nav-link"
+    href="/active"
+  >
+    Active Link
+  </a>
+</DocumentFragment>
+`;
