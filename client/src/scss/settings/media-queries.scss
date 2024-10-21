@@ -7,11 +7,11 @@ $breakpoints: (
 );
 
 $queries: (
-  up-to-mobile: "(max-width: #{map.get($breakpoints, mobile-max) / 16}rem)",
-  up-to-tablet: "(max-width: #{map.get($breakpoints, tablet-max) / 16}rem)",
-  up-to-laptop: "(max-width: #{map.get($breakpoints, laptop-max) / 16}rem)",
+  up-to-mobile: "(max-width: #{calc(map.get($breakpoints, mobile-max) / 16)}rem)",
+  up-to-tablet: "(max-width: #{calc(map.get($breakpoints, tablet-max) / 16)}rem)",
+  up-to-laptop: "(max-width: #{calc(map.get($breakpoints, laptop-max) / 16)}rem)",
   tablet-only:
-    "(min-width: #{map.get($breakpoints, mobile-max) / 16}rem) and (max-width: #{map.get($breakpoints, tablet-max) / 16}rem)",
+    "(min-width: #{calc(map.get($breakpoints, mobile-max) / 16)}rem) and (max-width: #{calc(map.get($breakpoints, tablet-max) / 16)}rem)",
 );
 
 @mixin query($query) {
