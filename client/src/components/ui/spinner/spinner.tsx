@@ -12,7 +12,8 @@ export function Spinner({ isLoading = false }: SpinnerProps) {
   return (
     <div
       className={styles.center}
-      data-testid="spinner"
+      role="status"
+      aria-live="polite"
     >
       <div className={styles.wrapper}>
         <div className={styles.firstRing} />

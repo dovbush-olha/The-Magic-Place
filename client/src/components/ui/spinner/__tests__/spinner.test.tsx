@@ -1,15 +1,15 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '@/testing/test-utils.tsx';
 
-import { Spinner } from './spinner';
+import { Spinner } from '../spinner.tsx';
 
 describe('Spinner component', () => {
   it('does not render when isLoading is false', () => {
     render(<Spinner isLoading={false} />);
-    expect(screen.queryByTestId('spinner')).not.toBeInTheDocument();
+    expect(screen.queryByRole('status')).not.toBeInTheDocument();
   });
 
   it('renders correctly when isLoading is true', () => {
     render(<Spinner isLoading={true} />);
-    expect(screen.getByTestId('spinner')).toBeInTheDocument();
+    expect(screen.getByRole('status')).toBeInTheDocument();
   });
 });
