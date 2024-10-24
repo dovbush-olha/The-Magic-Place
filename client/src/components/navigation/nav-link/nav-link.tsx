@@ -9,7 +9,6 @@ export function NavLink({ children, to, ...props }: NavLinkProps) {
     <ReactRouterNavLink
       className={styles.navLink}
       to={to}
-      data-testid="nav-link"
       {...props}
     >
       {children}

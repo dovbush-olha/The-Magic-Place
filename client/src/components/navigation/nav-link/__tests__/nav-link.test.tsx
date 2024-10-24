@@ -6,7 +6,7 @@ describe('NavLink component', () => {
   it('renders correctly with children and to prop', async () => {
     await renderApp(<NavLink to="/home">Home</NavLink>);
 
-    const navLink = screen.getByTestId('nav-link');
+    const navLink = screen.getByRole('link', { name: /home/i });
     expect(navLink).toBeInTheDocument();
     expect(navLink).toHaveTextContent('Home');
   });
@@ -14,14 +14,14 @@ describe('NavLink component', () => {
   it('passes the correct "to" prop', async () => {
     await renderApp(<NavLink to="/about">About</NavLink>);
 
-    const navLink = screen.getByTestId('nav-link');
+    const navLink = screen.getByRole('link', { name: /about/i });
     expect(navLink).toHaveAttribute('href', '/about');
   });
 
   it('does not render when children is missing', async () => {
     await renderApp(<NavLink to="/home" />);
 
-    expect(screen.queryByTestId('nav-link')).not.toBeInTheDocument();
+    expect(screen.queryByRole('link')).not.toBeInTheDocument();
   });
 
   it('matches snapshot', async () => {
