@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import styles from './visually-hidden.module.scss';
 
 export type VisuallyHiddenProps = {
-  children: ReactNode;
+  readonly children: ReactNode;
 };
 
 export function VisuallyHidden({ children }: VisuallyHiddenProps) {
