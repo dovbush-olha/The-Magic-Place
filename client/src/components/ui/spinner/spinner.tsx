@@ -1,3 +1,5 @@
+import { VisuallyHidden } from '@/components/ui/visually-hidden';
+
 import styles from './spinner.module.scss';
 
 type SpinnerProps = {
@@ -16,6 +18,8 @@ export function Spinner({ isLoading = false }: SpinnerProps) {
       aria-live="polite"
     >
       <div className={styles.wrapper}>
+        <VisuallyHidden>Loading</VisuallyHidden>
+
         <div className={styles.firstRing} />
         <div className={styles.secondRing} />
         <div className={styles.thirdRing} />
