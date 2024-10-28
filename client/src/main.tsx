@@ -10,7 +10,10 @@ import { ServerApiClientProvider } from './lib/trpc/trpc.tsx';
 
 import './scss/global.scss';
 
-createRoot(document.getElementById('root')!).render(
+const root = document.getElementById('root');
+if (!root) throw new Error('No root element found');
+
+createRoot(root).render(
   <React.StrictMode>
     <ServerApiClientProvider>
       <RouterProvider router={appRoutes} />
