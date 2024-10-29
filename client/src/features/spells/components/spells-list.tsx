@@ -4,7 +4,7 @@ import type { Spell } from '@magic-place/server/src/lib/constants';
 import { ROUTES } from '@/config/routes';
 
 type SpellsListProps = {
-  spells: Spell[];
+  readonly spells: Spell[];
 };
 
 export function SpellsList({ spells }: SpellsListProps) {

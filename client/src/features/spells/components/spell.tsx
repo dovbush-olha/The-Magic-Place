@@ -1,8 +1,9 @@
 import type { Spell } from '@magic-place/server/src/lib/constants';
 
 type SpellProps = {
-  spell: Spell;
+  readonly spell: Spell;
 };
+
 export function Spell({ spell }: SpellProps) {
   return (
     <div>
