@@ -2,7 +2,7 @@ import { SpellsList } from '@/features/spells/components/spells-list.tsx';
 import { serverApiClient } from '@/lib/trpc/constants.ts';
 
 export function SpellsRoute() {
-  const { isLoading, isFetching, isError } = serverApiClient.getSpells.useQuery();
+  const { isLoading, isFetching, isError, data } = serverApiClient.getSpells.useQuery();
 
   if (isLoading || isFetching) {
     return <span>Loading...</span>;
@@ -15,7 +15,7 @@ export function SpellsRoute() {
   return (
     <div>
       <h1>All Spells Page</h1>
-      <SpellsList />
+      {data?.spells ? <SpellsList spells={data.spells} /> : <span>No spells available</span>}{' '}
     </div>
   );
 }
