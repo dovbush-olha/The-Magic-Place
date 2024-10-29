@@ -1,21 +1,15 @@
-import { useParams } from 'react-router-dom';
+import type { Spell } from '@magic-place/server/src/lib/constants';
 
-import type { RouteParams } from '@/config/routes';
-import { serverApiClient } from '@/lib/trpc/constants.ts';
+type SpellProps = {
+  readonly spell: Spell;
+};
 
-export function Spell() {
-  const { spellName } = useParams() as RouteParams['viewSpellParams'];
-  const { data } = serverApiClient.getSpell.useQuery({ spellName });
-
-  if (!data?.spell) {
-    return <span>Spell not found</span>;
-  }
-
+export function Spell({ spell }: SpellProps) {
   return (
     <div>
-      <h1>Spell {data.spell.spellName}</h1>
-      <p>{data.spell.description}</p>
-      <p>{data.spell.book}</p>
+      <h1>Spell {spell.spellName}</h1>
+      <p>{spell.description}</p>
+      <p>{spell.book}</p>
     </div>
   );
 }

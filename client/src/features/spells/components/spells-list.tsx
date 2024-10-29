@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
+import type { Spell } from '@magic-place/server/src/lib/constants';
 
 import { ROUTES } from '@/config/routes';
-import { serverApiClient } from '@/lib/trpc/constants.ts';
 
-export function SpellsList() {
-  const { data } = serverApiClient.getSpells.useQuery();
+type SpellsListProps = {
+  readonly spells: Spell[];
+};
 
+export function SpellsList({ spells }: SpellsListProps) {
   return (
     <ul>
-      {data?.spells.map((spell) => (
+      {spells.map((spell) => (
         <li key={spell.spellName}>
           <Link to={ROUTES.viewSpellRoute({ spellName: spell.spellName })}>{spell.spellName}</Link>
           <p>{spell.book}</p>

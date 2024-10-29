@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+import { Spell } from '../../lib/constants';
 import { spells } from '../../lib/spells';
 import { publicProcedure } from '../../lib/trpc';
 
@@ -10,6 +11,6 @@ export const getSpellTrpcRoute = publicProcedure
     }),
   )
   .query(({ input }) => {
-    const spell = spells.find((spell) => spell.spellName === input.spellName);
-    return { spell: spell ?? null };
+    const spell: Spell | undefined = spells.find((spell) => spell.spellName === input.spellName);
+    return { spell: spell };
   });
