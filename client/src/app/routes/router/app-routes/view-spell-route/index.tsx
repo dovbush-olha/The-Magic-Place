@@ -6,7 +6,7 @@ import { serverApiClient } from '@/lib/trpc/constants.ts';
 
 export function ViewSpellRoute() {
   const { spellName } = useParams() as RouteParams['viewSpellParams'];
-  const { isLoading, isFetching, isError } = serverApiClient.getSpell.useQuery({ spellName });
+  const { isLoading, isFetching, isError, data } = serverApiClient.getSpell.useQuery({ spellName });
 
   if (isLoading || isFetching) {
     return <span>Loading...</span>;
@@ -16,5 +16,5 @@ export function ViewSpellRoute() {
     return <span>Error</span>;
   }
 
-  return <Spell />;
+  return <>{data?.spell ? <Spell spell={data?.spell} /> : <span>Spell not found</span>}</>;
 }
