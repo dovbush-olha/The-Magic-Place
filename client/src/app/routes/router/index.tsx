@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { SpellsRoute } from 'src/app/routes/router/app-routes/spells-route';
-import { ViewSpellRoute } from 'src/app/routes/router/app-routes/view-spell-route';
 
 import { RootRoute } from '@/app/routes/router/app-routes/root-route/root-route.tsx';
+import { SpellsRoute } from '@/app/routes/router/app-routes/spells-route';
+import { ViewSpellRoute } from '@/app/routes/router/app-routes/view-spell-route';
 
 import { routeParams, ROUTES } from '../../../config/routes';
 
