@@ -4,7 +4,7 @@ import { Spinner } from '@/components/ui/spinner';
 import { ServerApiClientProvider } from '@/lib/trpc/trpc.tsx';
 
 type AppProviderProps = {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 };
 
 export function AppProvider({ children }: AppProviderProps) {
