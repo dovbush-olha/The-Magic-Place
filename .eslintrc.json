@@ -22,6 +22,7 @@
       "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
       "rules": {
         "no-unused-vars": "warn",
+        "@typescript-eslint/consistent-type-definitions": ["error", "type"],
         "simple-import-sort/imports": [
           "error",
           {
