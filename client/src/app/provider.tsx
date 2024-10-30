@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 
 import { Spinner } from '@/components/ui/spinner';
 import { ServerApiClientProvider } from '@/lib/trpc/trpc.tsx';
@@ -10,7 +11,9 @@ type AppProviderProps = {
 export function AppProvider({ children }: AppProviderProps) {
   return (
     <Suspense fallback={<Spinner isLoading={true} />}>
-      <ServerApiClientProvider>{children}</ServerApiClientProvider>
+      <HelmetProvider>
+        <ServerApiClientProvider>{children}</ServerApiClientProvider>
+      </HelmetProvider>
     </Suspense>
   );
 }

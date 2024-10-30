@@ -1,3 +1,4 @@
+import { Head } from '@/components/seo/head.tsx';
 import { SpellsList } from '@/features/spells/components/spells-list.tsx';
 import { serverApiClient } from '@/lib/trpc/constants.ts';
 
@@ -13,9 +14,12 @@ export function SpellsRoute() {
   }
 
   return (
-    <div>
-      <h1>All Spells Page</h1>
-      {data?.spells ? <SpellsList spells={data.spells} /> : <span>No spells available</span>}{' '}
-    </div>
+    <>
+      <Head title="Spells" />
+      <div>
+        <h1>All Spells Page</h1>
+        {data?.spells ? <SpellsList spells={data.spells} /> : <span>No spells available</span>}{' '}
+      </div>
+    </>
   );
 }

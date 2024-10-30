@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 
+import { Head } from '@/components/seo/head.tsx';
 import type { RouteParams } from '@/config/routes';
 import { Spell } from '@/features/spells/components/spell.tsx';
 import { serverApiClient } from '@/lib/trpc/constants.ts';
@@ -16,5 +17,16 @@ export function ViewSpellRoute() {
     return <span>Error</span>;
   }
 
-  return <>{data?.spell ? <Spell spell={data?.spell} /> : <span>Spell not found</span>}</>;
+  return (
+    <>
+      {data?.spell ? (
+        <>
+          <Head title={data.spell.spellName} />
+          <Spell spell={data?.spell} />
+        </>
+      ) : (
+        <span>Spell not found</span>
+      )}
+    </>
+  );
 }
