@@ -7,12 +7,12 @@ type HeadProps = {
 
 const helmetData = new HelmetData({});
 
-export function Head({ title = '', description = '' }: HeadProps) {
+export function Head({ title = '', description = '' }: HeadProps = {}) {
   return (
     <Helmet
       helmetData={helmetData}
       title={title ? `${title} | The Magic Place` : undefined}
-      defaultTitle="The Magic Place__tests__"
+      defaultTitle="The Magic Place"
     >
       <meta
         name="description"
