@@ -12,7 +12,7 @@ export function Head({ title = '', description = '' }: HeadProps) {
     <Helmet
       helmetData={helmetData}
       title={title ? `${title} | The Magic Place` : undefined}
-      defaultTitle="The Magic Place"
+      defaultTitle="The Magic Place__tests__"
     >
       <meta
         name="description"
