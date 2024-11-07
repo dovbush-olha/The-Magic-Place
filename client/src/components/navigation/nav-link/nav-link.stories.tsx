@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { NavLink } from './nav-link';
 
 const meta: Meta<typeof NavLink> = {
+  title: 'Navigation/NavLink',
   component: NavLink,
 };
 

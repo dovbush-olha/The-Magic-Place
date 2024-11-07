@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Particles from '@tsparticles/react';
 
+import { Header } from '@/components/layouts/header';
 import { starsOptions } from '@/lib/particles';
 
 import { useStarsParticles } from './use-stars-particles.ts';
@@ -19,6 +20,7 @@ export function RootRoute() {
         />
       )}
 
+      <Header />
       <div>
         <Outlet />
       </div>
