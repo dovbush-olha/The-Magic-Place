@@ -29,10 +29,15 @@
 
 .navRight {
   justify-content: flex-end;
+  gap: 20px;
 }
 
 .logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+
+  img {
+    scale: 1.2;
+  }
 }
