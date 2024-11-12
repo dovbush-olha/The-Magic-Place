@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header component > matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="_header_31cdbd"
+  >
+    <nav
+      class="_navbar_31cdbd"
+    >
+      <div
+        class="_navLeft_31cdbd"
+      >
+        <a
+          aria-current="page"
+          class="_navLink_101612 active"
+          href="/"
+        >
+          Home
+        </a>
+      </div>
+      <div
+        class="_logo_31cdbd"
+      >
+        <img
+          alt="logo"
+          height="100"
+          src="/src/assets/logo-icon.png"
+          width="100"
+        />
+      </div>
+      <div
+        class="_navRight_31cdbd"
+      >
+        <a
+          class="_navLink_101612"
+          href="/profile"
+        >
+          Profile
+        </a>
+        <a
+          class="_navLink_101612"
+          href="/settings"
+        >
+          Settings
+        </a>
+      </div>
+    </nav>
+  </header>
+</DocumentFragment>
+`;

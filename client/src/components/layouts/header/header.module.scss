@@ -1,0 +1,43 @@
+@import "../../../scss/settings/colors";
+
+.header {
+  position: sticky;
+  offset: 0;
+  background-color: color(background, dark-blue);
+}
+
+.navbar {
+  height: 9.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 72.5rem;
+  padding-inline: 32px;
+}
+
+.navLeft,
+.navRight {
+  flex-grow: 1;
+  display: flex;
+}
+
+.navLeft {
+  justify-content: flex-start;
+}
+
+.navRight {
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  img {
+    scale: 1.2;
+  }
+}
