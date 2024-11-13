@@ -7,7 +7,7 @@ export function NavLink({ children, to, ...props }: NavLinkProps) {
 
   return (
     <ReactRouterNavLink
-      className={styles.navLink}
+      className={({ isActive }) => (isActive ? `${styles.navLink} ${styles.active}` : styles.navLink)}
       to={to}
       {...props}
     >
