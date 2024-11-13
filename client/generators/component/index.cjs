@@ -52,6 +52,11 @@ module.exports = {
         path: componentGeneratePath + '/{{kebabCase name}}/{{kebabCase name}}.stories.tsx',
         templateFile: 'generators/component/component.stories.tsx.hbs',
       },
+      {
+        type: 'add',
+        path: componentGeneratePath + '/{{kebabCase name}}/{{kebabCase name}}.module.scss',
+        templateFile: 'generators/component/component.module.scss.hbs',
+      },
     ];
   },
 };
