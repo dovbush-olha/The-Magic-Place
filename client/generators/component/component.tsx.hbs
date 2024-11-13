@@ -1,8 +1,10 @@
+import styles from './{{kebabCase name}}.module.scss';
+
 export type {{properCase name}}Props = {};
 
 export function {{properCase name}} ({}: {{properCase name}}Props) {
   return (
-    <div>
+    <div className={styles.wrapper}>
       {{properCase name}}
     </div>
   ); 
