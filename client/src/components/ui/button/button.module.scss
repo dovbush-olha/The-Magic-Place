@@ -9,22 +9,56 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 28px;
   border: 1px solid;
   border-image-slice: 1;
-  text-transform: uppercase;
   transition: all 200ms ease-out;
   backdrop-filter: blur(2px);
-  font-weight: font-weight(bold);
   font-size: var(--14px);
-  min-height: 52px;
 
   & svg {
     flex-shrink: 0;
   }
 }
 
+.primary {
+  text-transform: capitalize;
+  font-weight: font-weight(semibold);
+  padding: 8px 16px;
+  line-height: normal;
+  min-height: 36px;
+  border-image-source: linear-gradient(94.84deg, #3d5699 -0.3%, #3d5699 -0.3%, #ccdaff 99%);
+  border-image-slice: 1;
+  background-color: color(buttons, blue);
+  color: color(text, blue);
+
+  &:hover,
+  &:active {
+    box-shadow: 0 0 8px #99b5ffcc;
+  }
+
+  &:active {
+    background-color: #99b5ff66;
+  }
+
+  &:disabled {
+    background-color: color(buttons, disabled-bg);
+    color: color(buttons, disabled);
+    border: 1px solid color(buttons, disabled);
+    cursor: default;
+
+    &:hover,
+    &:active {
+      box-shadow: none;
+      background-color: color(buttons, disabled-bg);
+    }
+  }
+}
+
 .secondary {
+  text-transform: uppercase;
+  font-weight: font-weight(bold);
+  padding: 14px 28px;
+  min-height: 52px;
   border-image-source: linear-gradient(94.84deg, #a78047 -0.28%, #a78047 -0.27%, #fff5e5 99.72%);
   border-image-slice: 1;
   background-color: color(buttons, brown-20);
@@ -32,11 +66,11 @@
 
   &:hover,
   &:active {
-    box-shadow: 0 0 8px hsla(40deg 100% 90% / 80%);
+    box-shadow: 0 0 8px #fecc;
   }
 
   &:active {
-    background-color: hsla(40deg 43% 49% / 40%);
+    background-color: #b38f4766;
   }
 
   &:disabled {

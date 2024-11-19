@@ -13,6 +13,23 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
+export const PrimaryButton: Story = {
+  args: {
+    children: 'Button',
+    variant: BUTTON_VARIANTS.PRIMARY,
+    type: 'button',
+  },
+};
+
+export const PrimaryDisabledButton: Story = {
+  args: {
+    children: 'Button',
+    variant: BUTTON_VARIANTS.PRIMARY,
+    type: 'button',
+    isDisabled: true,
+  },
+};
+
 export const SecondaryButton: Story = {
   args: {
     children: 'Button',
