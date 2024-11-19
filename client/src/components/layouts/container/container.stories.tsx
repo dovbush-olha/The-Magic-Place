@@ -4,7 +4,7 @@ import { Container } from './container';
 
 const meta: Meta<typeof Container> = {
   component: Container,
-  title: 'Layouts/Container',
+  title: 'Components/Layouts/Container',
 };
 
 export default meta;
