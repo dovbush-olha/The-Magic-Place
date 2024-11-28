@@ -7,7 +7,13 @@ export type IconProps = {
   color?: string;
 };
 
-export function Icon({ name, state = ICON_STATE.SOLID, size = 24, color = 'currentColor', ...props }: IconProps) {
+export function Icon({
+  name,
+  state = ICON_STATE.SOLID,
+  size = 24,
+  color = 'currentColor',
+  ...props
+}: Readonly<IconProps>) {
   return (
     <svg
       width={size}
