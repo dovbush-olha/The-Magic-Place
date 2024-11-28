@@ -1,11 +1,11 @@
 {
   "*.{ts,js,tsx,jsx}": [
     "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --fix",
-    "prettier --loglevel warn --cache --write"
+    "prettier --log-level warn --cache --write"
   ],
   "*.scss": [
     "stylelint --cache --cache-location ./node_modules/.cache/.stylelintcache --fix",
-    "prettier --loglevel warn --cache --write"
+    "prettier --log-level warn --cache --write"
   ],
-  "*.{json,md}": "prettier --loglevel warn --cache --write"
+  "*.{json,md}": "prettier --log-level warn --cache --write"
 }

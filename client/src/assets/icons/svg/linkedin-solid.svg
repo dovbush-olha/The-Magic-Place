@@ -1,0 +1,22 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_627_1618)">
+        <g filter="url(#filter0_d_627_1618)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.13193 8.69024H12.6974V10.4662C13.211 9.4448 14.5281 8.52704 16.5067 8.52704C20.2996 8.52704 21.2001 10.5603 21.2001 14.2909V21.2H17.3601V15.1405C17.3601 13.016 16.8465 11.8179 15.539 11.8179C13.7255 11.8179 12.9719 13.1091 12.9719 15.1395V21.2H9.13193V8.69024ZM2.54729 21.0368H6.38729V8.52704H2.54729V21.0368ZM6.93737 4.448C6.93751 4.76986 6.87368 5.08855 6.74958 5.38552C6.62549 5.6825 6.4436 5.95185 6.21449 6.17792C5.75024 6.63932 5.12183 6.89759 4.46729 6.896C3.81391 6.89556 3.18695 6.63795 2.72201 6.17888C2.49373 5.95204 2.31246 5.68239 2.18858 5.38537C2.0647 5.08836 2.00065 4.76982 2.00009 4.448C2.00009 3.79808 2.25929 3.176 2.72297 2.71712C3.1875 2.25743 3.81472 1.99971 4.46825 2C5.12297 2 5.75081 2.25824 6.21449 2.71712C6.67721 3.176 6.93737 3.79808 6.93737 4.448Z" fill="currentColor"/>
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_d_627_1618" x="-1.99991" y="-2" width="27.2" height="27.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_627_1618"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_627_1618" result="shape"/>
+        </filter>
+        <clipPath id="clip0_627_1618">
+            <rect width="24" height="24" fill="white"/>
+        </clipPath>
+    </defs>
+</svg>

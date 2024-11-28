@@ -1,4 +1,4 @@
-import Logo from '@/assets/logo-icon.png';
+import Logo from '@/assets/icons/png/logo-icon.png';
 import { Container } from '@/components/layouts/container';
 import { NavLink } from '@/components/navigation/nav-link';
 import { ROUTES } from '@/config/routes';
