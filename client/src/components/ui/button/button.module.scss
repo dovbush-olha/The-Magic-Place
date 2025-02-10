@@ -1,0 +1,88 @@
+@import "../../../scss/settings";
+
+.btn {
+  all: unset;
+  outline: revert;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid;
+  border-image-slice: 1;
+  transition: all 200ms ease-out;
+  backdrop-filter: blur(2px);
+  font-size: var(--14px);
+
+  & svg {
+    flex-shrink: 0;
+  }
+}
+
+.primary {
+  text-transform: capitalize;
+  font-weight: font-weight(semibold);
+  padding: 8px 16px;
+  line-height: normal;
+  min-height: 36px;
+  border-image-source: linear-gradient(94.84deg, #3d5699 -0.3%, #3d5699 -0.3%, #ccdaff 99%);
+  border-image-slice: 1;
+  background-color: color(buttons, blue);
+  color: color(text, blue);
+
+  &:hover,
+  &:active {
+    box-shadow: 0 0 8px #99b5ffcc;
+  }
+
+  &:active {
+    background-color: #99b5ff66;
+  }
+
+  &:disabled {
+    background-color: color(buttons, disabled-bg);
+    color: color(buttons, disabled);
+    border: 1px solid color(buttons, disabled);
+    cursor: default;
+
+    &:hover,
+    &:active {
+      box-shadow: none;
+      background-color: color(buttons, disabled-bg);
+    }
+  }
+}
+
+.secondary {
+  text-transform: uppercase;
+  font-weight: font-weight(bold);
+  padding: 14px 28px;
+  min-height: 52px;
+  border-image-source: linear-gradient(94.84deg, #a78047 -0.28%, #a78047 -0.27%, #fff5e5 99.72%);
+  border-image-slice: 1;
+  background-color: color(buttons, brown-20);
+  color: color(buttons, brown-100);
+
+  &:hover,
+  &:active {
+    box-shadow: 0 0 8px #fecc;
+  }
+
+  &:active {
+    background-color: #b38f4766;
+  }
+
+  &:disabled {
+    background-color: color(buttons, disabled-bg);
+    color: color(buttons, disabled);
+    border: 1px solid color(buttons, disabled);
+    cursor: default;
+
+    &:hover,
+    &:active {
+      box-shadow: none;
+      background-color: color(buttons, disabled-bg);
+    }
+  }
+}

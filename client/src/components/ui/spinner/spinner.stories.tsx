@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Spinner } from './spinner.tsx';
 
 const meta: Meta<typeof Spinner> = {
-  title: 'Components/Spinner',
+  title: 'Components/UI/Spinner',
   component: Spinner,
   tags: ['autodocs'],
 };
