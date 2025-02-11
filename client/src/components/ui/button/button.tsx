@@ -1,47 +1,47 @@
+import React from 'react';
 import { clsx } from 'clsx';
 
 import { BUTTON_VARIANTS, ButtonVariants } from '@/components/ui/button/constants.ts';
+import { IconProps } from '@/components/ui/icon/icon.tsx';
 
 import styles from './button.module.scss';
 
-type CommonProps = {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  href?: string;
   children: React.ReactNode;
   variant?: ButtonVariants;
-  asLink?: boolean;
-  isDisabled?: boolean;
+  className?: string;
+  iconLeft?: React.ReactElement<IconProps>;
+  iconRight?: React.ReactElement<IconProps>;
 };
 
-type ButtonSpecificProps = {
-  asLink?: false;
-  onClick?: () => void;
-  type?: 'button' | 'submit';
-};
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ href, children, iconLeft, iconRight, className, variant = BUTTON_VARIANTS.PRIMARY, ...props }, ref) => {
+    if (href) {
+      return (
+        <a
+          href={href}
+          className={clsx(styles.btn, styles[variant], className)}
+        >
+          {iconLeft}
+          {children}
+          {iconRight}
+        </a>
+      );
+    }
 
-type LinkSpecificProps = {
-  asLink: true;
-  href: string;
-  target?: '_blank' | '_self' | '_parent' | '_top';
-  rel?: string;
-};
+    return (
+      <button
+        ref={ref}
+        className={clsx(styles.btn, styles[variant], className)}
+        {...props}
+      >
+        {iconLeft}
+        {children}
+        {iconRight}
+      </button>
+    );
+  },
+);
 
-export type ButtonProps = CommonProps & (ButtonSpecificProps | LinkSpecificProps);
-
-export function Button({
-  children,
-  variant = BUTTON_VARIANTS.PRIMARY,
-  asLink = false,
-  isDisabled = false,
-  ...props
-}: ButtonProps) {
-  const Component = asLink ? 'a' : 'button';
-
-  return (
-    <Component
-      disabled={asLink ? undefined : isDisabled}
-      className={clsx(styles.btn, styles[variant])}
-      {...props}
-    >
-      {children}
-    </Component>
-  );
-}
+Button.displayName = 'Button';

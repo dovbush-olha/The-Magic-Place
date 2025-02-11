@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { BUTTON_VARIANTS } from '@/components/ui/button/constants.ts';
+import { Icon } from '@/components/ui/icon';
+import { ICON_NAME } from '@/components/ui/icon/consts.ts';
 
 import { Button } from './button';
 
@@ -26,7 +28,7 @@ export const PrimaryDisabledButton: Story = {
     children: 'Button',
     variant: BUTTON_VARIANTS.PRIMARY,
     type: 'button',
-    isDisabled: true,
+    disabled: true,
   },
 };
 
@@ -43,7 +45,7 @@ export const DisabledSecondaryButton: Story = {
     children: 'Button',
     variant: BUTTON_VARIANTS.SECONDARY,
     type: 'button',
-    isDisabled: true,
+    disabled: true,
   },
 };
 
@@ -51,8 +53,32 @@ export const SecondaryLink: Story = {
   args: {
     children: 'Link',
     variant: BUTTON_VARIANTS.SECONDARY,
-    asLink: true,
     href: '#',
-    target: '_blank',
+  },
+};
+
+export const ButtonWithLeftIcon: Story = {
+  args: {
+    children: 'Button',
+    variant: BUTTON_VARIANTS.SECONDARY,
+    iconLeft: (
+      <Icon
+        name={ICON_NAME.HOME}
+        size={20}
+      />
+    ),
+  },
+};
+
+export const ButtonWithRightIcon: Story = {
+  args: {
+    children: 'Button',
+    variant: BUTTON_VARIANTS.SECONDARY,
+    iconRight: (
+      <Icon
+        name={ICON_NAME.HOME}
+        size={20}
+      />
+    ),
   },
 };
